@@ -5,9 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 wwa">					
-                    <span name="about" ></span>
-                    <div>
-                        <img style="position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);max-width: 100%;max-height: 100%;" src="images/bizPic.jpg">
+                    <div class="about">
+                        <img src="{{ Vite::asset('resources/images/Parking.jpg') }}">
                     </div>
             </div>
         </div>
