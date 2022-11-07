@@ -23,22 +23,30 @@
 
 <body>
     <!--home start-->
-    <div class="header">
-	<h2 class="logo">Some Like It Hot</h2>
-		<input type="checkbox" id="chk">
-	    	<label for="chk" class="show-menu-btn">
-	      		<i class="fas fa-ellipsis-h"></i>
-	    	</label>
-	    	<ul class="menu">
-		      <a href="{{ route('index') }}">Home</a>
-		      <a href="https://mindbody.io/fitness/studios/some-like-it-hot-power-yoga" "="">Class Registration</a>
-		      <a href="{{ route('gallery') }}"">Gallery</a>
-		      <a href="{{ route('contact') }}">Contact</a>
-		      <label for="chk" class="hide-menu-btn">
-		        <i class="fas fa-times"></i>
-		      </label>
-    		</ul>
-  	</div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Some Like It Hot</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="{{ route('index') }}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://mindbody.io/fitness/studios/some-like-it-hot-power-yoga" class="nav-link">Class Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
   	
     @yield('content')
 

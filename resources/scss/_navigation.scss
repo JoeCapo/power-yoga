@@ -1,0 +1,23 @@
+.navbar {
+    background-color: $light-brown;
+
+    .navbar-brand {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link{
+                color: $white;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 0 10px;
+                transition: 0.4s;
+            }
+        }
+    }
+}
