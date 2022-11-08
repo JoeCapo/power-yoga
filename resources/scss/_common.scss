@@ -72,11 +72,15 @@ footer {
     }
 
     .footer-links {
+        ul {
+            list-style: none;
+        }
+
         a {
             padding: 15px;
-            text-decoration: none;
             font-size: 13px;
             font-weight: 300;
+            text-decoration: none;
             color: $white;
             margin-top: 10px;
             margin-bottom: 10px;
