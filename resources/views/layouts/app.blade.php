@@ -10,7 +10,10 @@
 
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
     <script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/camera.min.js"></script>
@@ -50,34 +53,32 @@
   	
     @yield('content')
 
-    <div id="contact">
-    <div class="line7">
+    <footer>
         <div class="container">
-            <div class="row" style="margin-top: 190px;">
-                <div class="col-md-12">
-                    <h3 style="color: #fff;">Find us on Social Media!</h3>
-                </div>
-                <div class="soc col-md-12">
-                    <ul>
-                        <li class="soc2">
-                            <a href="https://www.facebook.com/Some-Like-it-Hot-Power-Yoga-Hamden-116209346420712/"></a>
-                        </li>
-                        <li class="soc3">
-                            <a href="https://www.instagram.com/hamdenpoweryoga/"></a>
-                        </li>
-                    </ul>
+            <div class="d-flex flex-column">
+                <div style="margin-top: 190px;">
+                    <div class="">
+                        <h3 class="text-white">Find us on Social Media!</h3>
+                    </div>
+                    <div class="soc">
+                        <div class="soc-icons d-flex justify-content-center">
+                            <div class="soc-icon soc2">
+                                <a href="https://www.facebook.com/Some-Like-it-Hot-Power-Yoga-Hamden-116209346420712/"></a>
+                            </div>
+                            <div class="soc-icon soc3">
+                                <a href="https://www.instagram.com/hamdenpoweryoga/"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="lineBlack">
-        <div class="container">
-            <div class="row downLine">
-                <div class="col-md-6 text-left copy">
-                    <p>Copyright © 2019 Some Like It Hot Power Yoga. All Rights Reserved.</p>
+    
+            <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between">
+                <div class="text-white">
+                    <div>Copyright © 2019 Some Like It Hot Power Yoga. All Rights Reserved.</div>
                 </div>
-                <div class="col-md-6 text-right dm">
-                    <ul id="downMenu">
+                <div class="footer-links">
+                    <ul class="d-flex">
                         <li class="active"><a href="http://somelikeithotpoweryoga.com/">Home</a></li>
                         <li><a href="https://mindbody.io/fitness/studios/some-like-it-hot-power-yoga">Class Registration</a></li>
                         <!-- <li><a href="http://somelikeithotpoweryoga.com/photo_gallery.html">Gallery</a></li> -->
@@ -86,6 +87,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
