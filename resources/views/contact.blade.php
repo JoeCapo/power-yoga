@@ -1,39 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="height: 100%;" class="gallery">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 wwa">					
-                    <div class="about">
-                        <img src="{{ Vite::asset('resources/images/Parking.jpg') }}">
-                    </div>
-            </div>
+<div class="container">
+    <div class="d-flex flex-column align-items-center">
+        <h1 class="text-slih-black text-center mt-5 mb-3">
+            <b>Our studio is located in:
+            <br>
+            <br>
+            3588 Whitney Ave Hamden, Connecticut</b>
+        </h1>
+
+        <div class="about my-4">
+            <img src="{{ Vite::asset('resources/images/Parking.jpg') }}">
         </div>
-        <div class="row">
-                <h1 class="contactus">
-                        <b>Our studio is located in:</b>
-                        <br>
-                        <br>
-                        <b>3588 Whitney Ave Hamden, Connecticut</b>
-                </h1>
-        </div>
-    </div> 
-    <div class="container">
-        <img style="margin-bottom:25px" src="images/Parking.JPG">
-    </div>
-    <div class="container">
+
         <div class="map-responsive">
             <iframe src="https://www.google.com/maps/embed?pb=!4v1572106238187!6m8!1m7!1skq9Bci0w4lFFSJjp-oUZVQ!2m2!1d41.42436863693886!2d-72.90582008398384!3f255.97378785019484!4f3.735479428912896!5f0.7820865974627469" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 hr1">
-                <hr/>
-            </div>
-        </div>
-    </div>  
+        <div class="accessory-hr my-5"></div>
+    </div>
 </div>  
 @endsection
