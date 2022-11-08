@@ -56,7 +56,7 @@
     <footer>
         <div class="container">
             <div class="d-flex flex-column">
-                <div style="margin-top: 190px;">
+                <div class="pt-5">
                     <div class="">
                         <h3 class="text-white">Find us on Social Media!</h3>
                     </div>
