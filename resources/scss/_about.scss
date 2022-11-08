@@ -1,0 +1,33 @@
+#about {
+    .accessory-hr {
+        height: 6px;
+        background-image: radial-gradient(
+            closest-side,
+            hsla(0, 0%, 50%, 1.0),
+            hsla(0, 0%, 50%, 0) 100%);
+        position: relative;
+    }
+
+    .accessory-hr1 {
+        border: 0;
+        height: 1px;
+        background-image: radial-gradient(
+            closest-side,
+            hsla(0, 0%, 50%, 1.0),
+            hsla(0, 0%, 50%, 0) 100%);;
+        margin: 20px 0;
+    }
+
+    .team {
+        margin-top: 46px;
+        
+        p {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #666;
+            font-weight: 300;
+            line-height: 24px;
+            padding: 25px;
+        }
+    }
+}
