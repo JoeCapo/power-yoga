@@ -2,11 +2,31 @@
 
 @section('content')
 
-<div>	
-    <h1 style="padding: 32.4px;color:#fff">Some Like It Hot Power Yoga Studio</h1>		
-        <a href="assets/img/photography/studio.jpg" data-lightbox="photo_gallery"><img src="assets/img/photography/thumbnails/studio.jpg"></a>
-        <a href="assets/img/photography/studio11.jpg" data-lightbox="photo_gallery"><img src="assets/img/photography/thumbnails/studio11.jpg"></a>
-        <a href="assets/img/photography/studio3.jpg" data-lightbox="photo_gallery"><img src="assets/img/photography/thumbnails/studio3.jpg"></a>
+<div class="container">	
+    <div class="d-flex flex-column align-items-center my-4">
+        <h1>Power Yoga Studio</h1>		
+
+        <div class="pswp-gallery pswp-gallery--single-column" id="studio-gallery">
+            <a href="{{ Vite::asset('resources/images/gallery/studio.jpg') }}" 
+                data-pswp-width="1669" 
+                data-pswp-height="2500" 
+                target="_blank">
+                <img src="{{ Vite::asset('resources/images/gallery/studio.jpg') }}" class="img-fluid" alt="Studio Image 1" />
+            </a>
+            <a href="{{ Vite::asset('resources/images/gallery/studio11.jpg') }}" 
+                data-pswp-width="1669" 
+                data-pswp-height="2500" 
+                target="_blank">
+                <img src="{{ Vite::asset('resources/images/gallery/studio11.jpg') }}" class="img-fluid" alt="Studio Image 2" />
+            </a>
+            <a href="{{ Vite::asset('resources/images/gallery/studio3.jpg') }}" 
+                data-pswp-width="1669" 
+                data-pswp-height="2500" 
+                target="_blank">
+                <img src="{{ Vite::asset('resources/images/gallery/studio3.jpg') }}" class="img-fluid" alt="Studio Image 3" />
+            </a>
+        </div>
+    </div>
 </div>
 
 @endsection

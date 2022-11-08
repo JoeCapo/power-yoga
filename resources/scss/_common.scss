@@ -31,8 +31,20 @@ h4 {
     margin: 20px 0;
 }
 
+img {
+    width: 230px;
+}
+
 footer {
     background-color: $slih-black;
+    // position: fixed;
+    // left: 0;
+    // bottom: 0;
+    // width: 100%;
+
+    @media screen and (max-width: 990px) {
+        position: relative;
+    }
 
     .soc {
         margin-top: 42px;

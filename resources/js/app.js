@@ -3,3 +3,5 @@ import.meta.glob([
   ]);
 
 import './bootstrap';
+
+import './gallery';
