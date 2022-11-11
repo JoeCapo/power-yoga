@@ -19,6 +19,31 @@
         </div>
 
         <div class="accessory-hr my-5"></div>
+    
+
+        {{-- contact form --}}
+        <form class="w-50">
+            <div class="mb-3">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fname">
+            </div>
+            <div class="mb-3">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lname">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Contact Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea type="textarea" class="form-control" id="message" rows="4" cols="50">
+                    Type Message Here
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </div>  
 @endsection
