@@ -20,29 +20,52 @@
 
         <div class="accessory-hr my-5"></div>
     
-
+        @if(Session::has('success'))
+            <div class="alert alert-success">
+                {{Session::get('success')}}
+            </div>
+        @endif
         {{-- contact form --}}
-        <form class="w-50">
+        <form class="w-50" method="POST" action="{{ route('contact.store') }}>
+            @csrf
             <div class="mb-3">
-            <label for="fname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="fname">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname" name="fname">
+                @if ($errors->has('fname'))
+                <div class="error">
+                    {{ $errors->first('fname') }}
+                </div>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="lname" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lname">
+                <input type="text" class="form-control" id="lname" name="lname">
+                @if ($errors->has('lname'))
+                <div class="error">
+                    {{ $errors->first('lname') }}
+                </div>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Contact Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                @if ($errors->has('email'))
+                <div class="error">
+                    {{ $errors->first('email') }}
+                </div>
+                @endif
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea type="textarea" class="form-control" id="message" rows="4" cols="50">
-                    Type Message Here
-                </textarea>
+                <textarea type="textarea" class="form-control" id="message" name="message" rows="4" cols="50"></textarea>
+                @if ($errors->has('message'))
+                <div class="error">
+                    {{ $errors->first('message') }}
+                </div>
+                @endif
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="send" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>  
