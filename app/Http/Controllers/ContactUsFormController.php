@@ -17,23 +17,22 @@ class ContactUsFormController extends Controller
     public function ContactUsForm(Request $request) {
         // Form validation
         $this->validate($request, [
-            'firstname' => 'required',
-            'lastname' => 'required',
+            'name' => 'required',
             'email' => 'required|email',
             'message' => 'required'
         ]);
+
         //  Store data in database
         Contact::create($request->all());
         
         //  Send mail to admin
         \Mail::send('mail', array(
-            'firstname' => $request->get('fname'),
-            'lastname' => $request->get('lname'),
+            'name' => $request->get('name'),
             'email' => $request->get('email'),
             'user_query' => $request->get('message'),
         ), function($message) use ($request){
             $message->from($request->email);
-            $message->to('jrcaporiccio@gmail.com', 'Admin')->subject($request->get('subject'));
+            $message->to('jrcaporiccio@gmail.com', 'Admin')->subject('Power Yoga Contact Request');
         });
 
         return back()->with('success', 'We have received your message and would like to thank you for writing to us.');

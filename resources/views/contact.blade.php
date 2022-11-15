@@ -26,23 +26,14 @@
             </div>
         @endif
         {{-- contact form --}}
-        <form class="w-50" method="POST" action="{{ route('contact.store') }}>
+        <form class="w-50" method="POST" action="{{ route('contact.store') }}">
             @csrf
             <div class="mb-3">
                 <label for="fname" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="fname" name="fname">
-                @if ($errors->has('fname'))
+                <input type="text" class="form-control" id="name" name="name">
+                @if ($errors->has('name'))
                 <div class="error">
-                    {{ $errors->first('fname') }}
-                </div>
-                @endif
-            </div>
-            <div class="mb-3">
-                <label for="lname" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lname" name="lname">
-                @if ($errors->has('lname'))
-                <div class="error">
-                    {{ $errors->first('lname') }}
+                    {{ $errors->first('name') }}
                 </div>
                 @endif
             </div>
